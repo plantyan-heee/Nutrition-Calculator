@@ -49,5 +49,3 @@ Cheddar cheese,402,24.2,33.1,2.3
 String cheese,80,6,5,1
 Greek yogurt,120,17,0,14
 Peanut butter,589,25,34.8,21
-Chicken soup,42,3,1.3,7.4
-Tomato soup,25,1.2,0.4,5.3
