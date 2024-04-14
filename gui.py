@@ -22,8 +22,7 @@ class App(Tk):
             self._frame.destroy()
         self._frame = new_frame
         self._frame.pack()
-
-
+        
 class Menu(Frame):
     def __init__(self, master):
         Frame.__init__(self, master)
@@ -31,7 +30,7 @@ class Menu(Frame):
 
         label = Label(
             self,
-            text="Nutrition Calculator V0.3\n Choose an option.",
+            text="Nutrition Calculator V0.3.1\n Choose an option.",
             bg="black",
             fg="grey")
         label.pack()
