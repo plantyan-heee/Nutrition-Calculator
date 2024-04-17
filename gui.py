@@ -109,12 +109,12 @@ class Calculator(Frame):
             fg="white")
         label.pack()
         # user input, food
-        label2 = Label(self, text="Name: ", bg="black", fg="black")
+        label2 = Label(self, text="Name: ", bg="black", fg="white")
         label2.pack()
         entryProduct = Entry(self, width=20, bg="#000621", fg="white")
         entryProduct.pack()
         # user input, amount
-        label3 = Label(self, text="Amount per 100g: ", bg="black", fg="black")
+        label3 = Label(self, text="Amount per 100g: ", bg="black", fg="white")
         label3.pack()
         entryGram = Entry(self, width=20, bg="#000621", fg="white")
         entryGram.pack()
