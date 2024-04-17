@@ -126,9 +126,9 @@ class Calculator(Frame):
             self,
             text="These are the nutrition values:",
             bg="black",
-            fg="black")
+            fg="white")
         label4.pack()
-        output = Text(self, width=20, height=6, wrap=WORD, bg="#000621")
+        output = Text(self, width=20, height=6, wrap=WORD, bg="#000621", fg="white")
         output.pack()
         # going back to menu
         self.button = Button(
