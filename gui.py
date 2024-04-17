@@ -22,7 +22,7 @@ class App(Tk):
             self._frame.destroy()
         self._frame = new_frame
         self._frame.pack()
-        
+
 class Menu(Frame):
     def __init__(self, master):
         Frame.__init__(self, master)
@@ -111,12 +111,12 @@ class Calculator(Frame):
         # user input, food
         label2 = Label(self, text="Name: ", bg="black", fg="black")
         label2.pack()
-        entryProduct = Entry(self, width=20, bg="#000621")
+        entryProduct = Entry(self, width=20, bg="#000621", fg="white")
         entryProduct.pack()
         # user input, amount
         label3 = Label(self, text="Amount per 100g: ", bg="black", fg="black")
         label3.pack()
-        entryGram = Entry(self, width=20, bg="#000621")
+        entryGram = Entry(self, width=20, bg="#000621", fg="white")
         entryGram.pack()
         # submit
         submit = Button(self, text="Submit", width=8, command=on_click)
