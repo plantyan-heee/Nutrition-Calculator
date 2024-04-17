@@ -147,7 +147,7 @@ class File_Write(Frame):
         def validate():
             def write(name, kcal, protein, carb, fat):
                 file = open("food_nutrients.txt", "a")
-                productValue = "%s,%s:%s:%s:%s" % (
+                productValue = "%s,%s,%s,%s,%s" % (
                     name, kcal, protein, carb, fat)
                 file.write("\n" + productValue)
                 file.close()
