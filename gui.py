@@ -126,7 +126,7 @@ class Calculator(Frame):
             self,
             text="These are the nutrition values:",
             bg="black",
-            fg="white")
+            fg="black")
         label4.pack()
         output = Text(self, width=20, height=6, wrap=WORD, bg="#000621", fg="white")
         output.pack()
@@ -147,7 +147,7 @@ class File_Write(Frame):
         def validate():
             def write(name, kcal, protein, carb, fat):
                 file = open("food_nutrients.txt", "a")
-                productValue = "%s,%s,%s,%s,%s" % (
+                productValue = "%s,%s,%s,%s,%s" (
                     name, kcal, protein, carb, fat)
                 file.write("\n" + productValue)
                 file.close()
