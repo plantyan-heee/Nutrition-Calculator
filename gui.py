@@ -175,27 +175,27 @@ class File_Write(Frame):
         label.pack()
         label1 = Label(self, text="Name:", bg="black", fg="white")
         label1.pack()
-        nameEntry = Entry(self, width=20, bg="#000621")
+        nameEntry = Entry(self, width=20, bg="#000621", fg="white")
         nameEntry.pack()
 
         label2 = Label(self, text="Calories:", bg="black", fg="white")
         label2.pack()
-        kcalEntry = Entry(self, width=20, bg="#000621")
+        kcalEntry = Entry(self, width=20, bg="#000621", fg="white")
         kcalEntry.pack()
 
         label3 = Label(self, text="Protein:", bg="black", fg="white")
         label3.pack()
-        proteinEntry = Entry(self, width=20, bg="#000621")
+        proteinEntry = Entry(self, width=20, bg="#000621", fg="white")
         proteinEntry.pack()
 
         label4 = Label(self, text="Carbohydrates:", bg="black", fg="white")
         label4.pack()
-        carbEntry = Entry(self, width=20, bg="#000621")
+        carbEntry = Entry(self, width=20, bg="#000621", fg="white")
         carbEntry.pack()
 
         label5 = Label(self, text="Fat:", bg="black", fg="white")
         label5.pack()
-        fatEntry = Entry(self, width=20, bg="#000621")
+        fatEntry = Entry(self, width=20, bg="#000621", fg="white")
         fatEntry.pack()
 
         submit = Button(self, text="Submit", width=8, command=validate)
