@@ -12,9 +12,9 @@ class App(Tk):
     def __init__(self):
         Tk.__init__(self)
         self._frame = None
-        self.title("App calculating nutrition values")
+        self.title("  .  ")
         self.switch(Menu)
-        self.geometry('350x350')
+        self.geometry('1080x1920')
         self.config(bg="black")
 
     def switch(self, frame_class):
@@ -31,7 +31,7 @@ class Menu(Frame):
 
         label = Label(
             self,
-            text="Nutrition Calculator V0.3.1\n Choose an option.",
+            text="Nutrition Calculator V0.4.1\n Choose an option.",
             bg="black",
             fg="grey")
         label.pack()

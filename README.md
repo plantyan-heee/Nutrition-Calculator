@@ -9,8 +9,13 @@
 ## User Manual
 - Calculator function
   - Type your food name with `CAPS` on the `First letter`
-  - Spacings are allowed
-  - The names are `Case Sensitive`
+  - Spacings are allowed between each word
+  - The names are `Case Sensitive` , so it has to be exactly the same as the database
+  - Type your amount of food in `INTEGER`
+- Food Datas function
+  - Type your food name with `CAPS` on the `First letter`
+  - Spacings are allowed between each word
+  - The names are `Case Sensitive` , so it has to be exactly the same as the database
 - Add a food Function
   - Type your food name according to the format below :
     - Type your food name with `CAPS` on the `First letter`
@@ -52,3 +57,15 @@
 - UI Improved
 - Added 10 more foods into database
 - Minor bug fix
+
+**V0.3.1**
+- Minor bug fix
+
+**V0.4** *Current version*
+- Added function `Food Datas`, which allow user to search data for food
+- UI Improved
+- Minor bug fixes
+
+**V0.4.1** *Current version*
+- Added 10 more foods into database
+- Minor bug fixes
