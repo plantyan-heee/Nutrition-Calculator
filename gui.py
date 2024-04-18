@@ -1,4 +1,5 @@
 import main
+import tkinter as tk
 from tkinter import messagebox
 from tkinter import *
 productList = {}
@@ -37,17 +38,100 @@ class Menu(Frame):
         button = Button(self, text="Calculator", width=20,
                         command=lambda: master.switch(Calculator))
         button.pack(padx=10, pady=10)
-        button2 = Button(self, text="Add a food", width=20,
+        button2 = Button(self, text="Food Datas", width=20,
+                         command=lambda: master.switch(foodDatas))
+        button2.pack(padx=10, pady=10)
+        button3 = Button(self, text="Add a food", width=20,
                          command=lambda: master.switch(File_Write))
-        button2.pack()
-        button3 = Button(self, text="Exit", width=20, command=self.close)
         button3.pack(padx=10, pady=10)
+        exit = Button(self, text="Exit", width=20, command=self.close)
+        exit.pack(padx=10, pady=10)
 
     def close(self):
         self.destroy()
         exit()
 
+class foodDatas(Frame):
+    def __init__(self, master):
+        Frame.__init__(self, master)
+        self.config(bg="black")
 
+        def result(product, gram):
+            kcalValue = proteinValue = carbValue = fatValue = 0
+            # check user value = database value
+            if product in productList:
+                (product, kcal, protein, carb, fat) = productList[product]
+                # calculate
+                kcalValue += gram * float(kcal)
+                proteinValue += gram * float(protein)
+                carbValue += gram * float(carb)
+                fatValue += gram * float(fat)
+                outcome = "Your product provided you with : \n %d kcal \n "\
+                    "%d protein \n %d carbs \n %d fat"\
+                    % (kcalValue, proteinValue, carbValue, fatValue)
+            else:
+                outcome = "Sorry, but we don't have this food in our database: %s, but you can add it! :)" % (
+                    product)
+            return outcome
+
+        def file_open():
+            with open("food_nutrients.txt") as file:
+                for row in file:
+                    if not row:
+                        continue
+                    else:
+                        name, kcal, protein, carb, fat = row.split(',')
+                        productList[name] = (
+                            name, kcal, protein, carb, fat)
+
+        def on_click():
+            product = entryProduct.get()
+            output.delete(0.0, END)
+
+            Error = False
+            gram = int(1)
+            try:
+                x = int(product)
+                Error = True
+            except BaseException:
+                pass
+            if Error == True:
+                messagebox.showerror("Error", "Please enter correct data!")
+            else:
+                file_open()
+                output.insert(END, result(product, gram))
+
+        label = Label(
+            self,
+            text="Enter a food",
+            bg="black",
+            fg="white")
+        label.pack()
+        # user input, food
+        label2 = Label(self, text="Name: ", bg="black", fg="white")
+        label2.pack()
+        entryProduct = Entry(self, width=20, bg="#000621", fg="white")
+        entryProduct.pack()
+        # submit
+        submit = Button(self, text="Submit", width=8, command=on_click)
+        submit.pack(padx=10, pady=10)
+        # output
+        label4 = Label(
+            self,
+            text="These are the nutrition values:",
+            bg="black",
+            fg="black")
+        label4.pack()
+        output = Text(self, width=20, height=6, wrap=WORD, bg="#000621", fg="white")
+        output.pack()
+        # going back to menu
+        button3 = Button(
+            self,
+            text="Back",
+            width=20,
+            command=lambda: master.switch(Menu))
+        button3.pack(padx=10, pady=10)
+        
 class Calculator(Frame):
     def __init__(self, master):
         Frame.__init__(self, master)
@@ -131,14 +215,13 @@ class Calculator(Frame):
         output = Text(self, width=20, height=6, wrap=WORD, bg="#000621", fg="white")
         output.pack()
         # going back to menu
-        self.button = Button(
+        button3 = Button(
             self,
             text="Back",
-            width=8,
+            width=20,
             command=lambda: master.switch(Menu))
-        self.button.pack(padx=10, pady=10)
-
-
+        button3.pack(padx=10, pady=10)
+        
 class File_Write(Frame):
     def __init__(self, master):
         Frame.__init__(self, master)
