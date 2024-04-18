@@ -31,7 +31,7 @@ class Menu(Frame):
 
         label = Label(
             self,
-            text="Nutrition Calculator V0.4.1\n Choose an option.",
+            text="Nutrition Calculator V0.4.2\n Choose an option.",
             bg="black",
             fg="grey")
         label.pack()
@@ -66,9 +66,7 @@ class foodDatas(Frame):
                 proteinValue += gram * float(protein)
                 carbValue += gram * float(carb)
                 fatValue += gram * float(fat)
-                outcome = "Your product provided you with : \n %d kcal \n "\
-                    "%d protein \n %d carbs \n %d fat"\
-                    % (kcalValue, proteinValue, carbValue, fatValue)
+                outcome = f"Your product provided you with:\n Calories: {kcalValue:.2f} kcal\n Protein: {proteinValue:.2f}\n Carbs: {carbValue:.2f}\n Fat: {fatValue:.2f}"
             else:
                 outcome = "Sorry, but we don't have this food in our database: %s, but you can add it! :)" % (
                     product)
@@ -122,7 +120,7 @@ class foodDatas(Frame):
             bg="black",
             fg="black")
         label4.pack()
-        output = Text(self, width=20, height=6, wrap=WORD, bg="#000621", fg="white")
+        output = Text(self, width=40, height=20, wrap=WORD, bg="#000621", fg="white")
         output.pack()
         # going back to menu
         button3 = Button(
@@ -147,9 +145,7 @@ class Calculator(Frame):
                 proteinValue += gram * float(protein)
                 carbValue += gram * float(carb)
                 fatValue += gram * float(fat)
-                outcome = "Your product provided you with : \n %d kcal \n "\
-                    "%d protein \n %d carbs \n %d fat"\
-                    % (kcalValue, proteinValue, carbValue, fatValue)
+                outcome = f"Your product provided you with:\n Calories: {kcalValue:.2f} kcal\n Protein: {proteinValue:.2f}\n Carbs: {carbValue:.2f}\n Fat: {fatValue:.2f}"
             else:
                 outcome = "Sorry, but we don't have this food in our database: %s, but you can add it! :)" % (
                     product)
@@ -172,7 +168,7 @@ class Calculator(Frame):
 
             Error = False
             try:
-                gram = int(entryGram.get())
+                gram = float(entryGram.get())
             except BaseException:
                 Error = True
             try:
@@ -212,7 +208,7 @@ class Calculator(Frame):
             bg="black",
             fg="black")
         label4.pack()
-        output = Text(self, width=20, height=6, wrap=WORD, bg="#000621", fg="white")
+        output = Text(self, width=40, height=20, wrap=WORD, bg="#000621", fg="white")
         output.pack()
         # going back to menu
         button3 = Button(
@@ -242,10 +238,10 @@ class File_Write(Frame):
             except BaseException:
                 name = nameEntry.get()
             try:
-                kcal = int(kcalEntry.get())
-                protein = int(proteinEntry.get())
-                carb = int(carbEntry.get())
-                fat = int(fatEntry.get())
+                kcal = (kcalEntry.get())
+                protein = (proteinEntry.get())
+                carb = (carbEntry.get())
+                fat = (fatEntry.get())
             except BaseException:
                 error = True
             if error == True:
