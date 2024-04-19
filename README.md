@@ -27,6 +27,97 @@
     - Fats
   - Click submit , the food will enter into our database automatically if nothing happens
 
+## Food List
+Apple
+Avocado
+Almonds
+Baked potato
+Banana
+Beans (black)
+Beans (kidney)
+Beans (lentils)
+Beef sirloin
+Bell pepper
+Black beans
+Black rice
+Black rice
+Blackberry
+Broccoli
+Brown rice
+Brussels sprout
+Butternut squash
+Cabbage
+Cantaloupe
+Carrot
+Cauliflower
+Celery
+Cheddar cheese
+Chicken breast
+Chicken thigh
+Chickpeas
+Coconut
+Cottage cheese
+Couscous
+Cranberry juice
+Cucumber
+Dates
+Drumstick
+Eggs
+Flour (whole wheat)
+Garlic
+Ginger
+Grapefruit
+Grapes
+Greek yogurt
+Green beans
+Hamburger
+Honey
+Ice cream (vanilla)
+Kale
+Kiwi
+Lettuce
+Mango
+Milk
+Mushrooms
+Navy beans
+Oatmeal
+Onion
+Orange
+Pasta (whole wheat)
+Peanut butter
+Peas
+Peach
+Pear
+Pineapple
+Plain yogurt
+Plum
+Pork loin
+Potato
+Potato chips
+Quinoa
+Raspberries
+Red bell pepper
+Rice (brown)
+Rice (white)
+Salmon
+Shrimp
+Shrimp cocktail
+Spinach
+Squash (summer)
+Strawberries
+String cheese
+Sweet potato
+Swiss chard
+Tangerine
+Tofu
+Tomato
+Turkey breast
+Turnip
+Watermelon
+Winter melon
+Whole wheat bread
+Yellow squash
+
 ## Update Logs
 **ALPHA VERSION**
 - Simple prototype , without UI
@@ -78,3 +169,7 @@
 - Add a food function improved
   - Allowed decimal places nutrition data
 - Minor bug fixes
+
+**V0.4.3** *Current version*
+- Program logic improved
+- UI Improved

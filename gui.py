@@ -2,6 +2,7 @@ import main
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import *
+from tkinter import filedialog
 productList = {}
 
 function = main
@@ -31,7 +32,7 @@ class Menu(Frame):
 
         label = Label(
             self,
-            text="Nutrition Calculator V0.4.2\n Choose an option.",
+            text="Nutrition Calculator V0.4.3\n Choose an option.",
             bg="black",
             fg="grey")
         label.pack()
@@ -46,7 +47,8 @@ class Menu(Frame):
         button3.pack(padx=10, pady=10)
         exit = Button(self, text="Exit", width=20, command=self.close)
         exit.pack(padx=10, pady=10)
-
+    
+    
     def close(self):
         self.destroy()
         exit()
@@ -70,6 +72,9 @@ class foodDatas(Frame):
             else:
                 outcome = "Sorry, but we don't have this food in our database: %s, but you can add it! :)" % (
                     product)
+                button3 = Button(self, text="Add the food", width=20,
+                         command=lambda: master.switch(File_Write))
+                button3.pack(padx=10, pady=10)
             return outcome
 
         def file_open():
@@ -149,6 +154,9 @@ class Calculator(Frame):
             else:
                 outcome = "Sorry, but we don't have this food in our database: %s, but you can add it! :)" % (
                     product)
+                button3 = Button(self, text="Add the food", width=20,
+                         command=lambda: master.switch(File_Write))
+                button3.pack(padx=10, pady=10)
             return outcome
 
         def file_open():
@@ -248,6 +256,8 @@ class File_Write(Frame):
                 messagebox.showerror("Error", "Please enter correct data!")
             else:
                 write(name, kcal, protein, carb, fat)
+                tk.messagebox.showinfo("Success", "Food added to the database!")
+                master.switch(Menu)
 
         label = Label(self, text="Enter the product name and its nutritional "
                       "values per 100 gram", bg="black", fg="white")
