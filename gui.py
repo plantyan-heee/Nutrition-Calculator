@@ -12,7 +12,7 @@ class App(Tk):
         self.title("  .  ")
         self.switch(Menu)
         self.geometry('1280x800')
-        self.config(bg="black")
+        self.config(bg="#000E19")
 
     def switch(self, frame_class):
         new_frame = frame_class(self)
@@ -24,24 +24,25 @@ class App(Tk):
 class Menu(Frame):
     def __init__(self, master):
         Frame.__init__(self, master)
-        self.config(bg="black")
+        self.config(bg="#000E19")
 
         label = Label(
             self,
             text="Nutrition Calculator V0.4.3\n Choose an option.",
-            bg="black",
-            fg="grey")
+            bg="#000E19",
+            fg="#79C7C5")
         label.pack()
-        button = Button(self, text="Calculator", width=20,
+        button = Button(self, text="Calculator", width=20, bg='#79C7C5', fg='#000E19',
                         command=lambda: master.switch(Calculator))
         button.pack(padx=10, pady=10)
-        button2 = Button(self, text="Food Datas", width=20,
+        button2 = Button(self, text="Food Datas", width=20, bg='#79C7C5', fg='#000E19',
                          command=lambda: master.switch(foodDatas))
         button2.pack(padx=10, pady=10)
-        button3 = Button(self, text="Add a food", width=20,
+        button3 = Button(self, text="Add a food", width=20, bg='#79C7C5', fg='#000E19',
                          command=lambda: master.switch(File_Write))
         button3.pack(padx=10, pady=10)
-        exit = Button(self, text="Exit", width=20, command=self.close)
+        exit = Button(self, text="Exit", width=20, bg='#79C7C5', fg='#000E19', 
+                      command=self.close)
         exit.pack(padx=10, pady=10)
     
     
@@ -52,7 +53,7 @@ class Menu(Frame):
 class foodDatas(Frame):
     def __init__(self, master):
         Frame.__init__(self, master)
-        self.config(bg="black")
+        self.config(bg="#000E19")
 
         def result(product, gram):
             kcalValue = proteinValue = carbValue = fatValue = 0
@@ -68,7 +69,7 @@ class foodDatas(Frame):
             else:
                 outcome = "Sorry, but we don't have this food in our database: %s, but you can add it! :)" % (
                     product)
-                button3 = Button(self, text="Add the food", width=20,
+                button3 = Button(self, text="Add the food", width=20, bg='#79C7C5', fg='#000E19',
                          command=lambda: master.switch(File_Write))
                 button3.pack(padx=10, pady=10)
             return outcome
@@ -103,13 +104,13 @@ class foodDatas(Frame):
         label = Label(
             self,
             text="Enter a food",
-            bg="black",
+            bg="#000E19",
             fg="white")
         label.pack()
         # user input, food
-        label2 = Label(self, text="Name: ", bg="black", fg="white")
+        label2 = Label(self, text="Name: ", bg="#000E19", fg="white")
         label2.pack()
-        entryProduct = Entry(self, width=20, bg="#000621", fg="white")
+        entryProduct = Entry(self, width=20, bg="#000E19", fg="#79C7C5")
         entryProduct.pack()
         # submit
         submit = Button(self, text="Submit", width=8, command=on_click)
@@ -118,23 +119,23 @@ class foodDatas(Frame):
         label4 = Label(
             self,
             text="These are the nutrition values:",
-            bg="black",
-            fg="black")
+            bg="#000E19",
+            fg="#000E19")
         label4.pack()
-        output = Text(self, width=40, height=20, wrap=WORD, bg="#000621", fg="white")
+        output = Text(self, width=40, height=20, wrap=WORD)
         output.pack()
         # going back to menu
         button3 = Button(
             self,
             text="Back",
-            width=20,
+            width=20, bg='#79C7C5', fg='#000E19',
             command=lambda: master.switch(Menu))
         button3.pack(padx=10, pady=10)
         
 class Calculator(Frame):
     def __init__(self, master):
         Frame.__init__(self, master)
-        self.config(bg="black")
+        self.config(bg="#000E19")
 
         def result(product, gram):
             kcalValue = proteinValue = carbValue = fatValue = 0
@@ -150,7 +151,7 @@ class Calculator(Frame):
             else:
                 outcome = "Sorry, but we don't have this food in our database: %s, but you can add it! :)" % (
                     product)
-                button3 = Button(self, text="Add the food", width=20,
+                button3 = Button(self, text="Add the food", width=20, bg='#79C7C5', fg='#000E19',
                          command=lambda: master.switch(File_Write))
                 button3.pack(padx=10, pady=10)
             return outcome
@@ -189,18 +190,18 @@ class Calculator(Frame):
         label = Label(
             self,
             text="Enter a food that you ate.",
-            bg="black",
+            bg="#000E19",
             fg="white")
         label.pack()
         # user input, food
-        label2 = Label(self, text="Name: ", bg="black", fg="white")
+        label2 = Label(self, text="Name: ", bg="#000E19", fg="white")
         label2.pack()
-        entryProduct = Entry(self, width=20, bg="#000621", fg="white")
+        entryProduct = Entry(self, width=20, bg="#79C7C5", fg="#000E19")
         entryProduct.pack()
         # user input, amount
-        label3 = Label(self, text="Amount per 100g: ", bg="black", fg="white")
+        label3 = Label(self, text="Amount per 100g: ", bg="#000E19", fg="white")
         label3.pack()
-        entryGram = Entry(self, width=20, bg="#000621", fg="white")
+        entryGram = Entry(self, width=20, bg="#79C7C5", fg="#000E19")
         entryGram.pack()
         # submit
         submit = Button(self, text="Submit", width=8, command=on_click)
@@ -209,23 +210,23 @@ class Calculator(Frame):
         label4 = Label(
             self,
             text="These are the nutrition values:",
-            bg="black",
-            fg="black")
+            bg="#000E19",
+            fg="#000E19")
         label4.pack()
-        output = Text(self, width=40, height=20, wrap=WORD, bg="#000621", fg="white")
+        output = Text(self, width=40, height=20, wrap=WORD)
         output.pack()
         # going back to menu
         button3 = Button(
             self,
             text="Back",
-            width=20,
+            width=20, bg='#79C7C5', fg='#000E19',
             command=lambda: master.switch(Menu))
         button3.pack(padx=10, pady=10)
         
 class File_Write(Frame):
     def __init__(self, master):
         Frame.__init__(self, master)
-        self.config(bg="black")
+        self.config(bg="#000E19")
 
         def validate():
             def write(name, kcal, protein, carb, fat):
@@ -256,31 +257,31 @@ class File_Write(Frame):
                 master.switch(Menu)
 
         label = Label(self, text="Enter the product name and its nutritional "
-                      "values per 100 gram", bg="black", fg="white")
+                      "values per 100 gram", bg="#000E19", fg="white")
         label.pack()
-        label1 = Label(self, text="Name:", bg="black", fg="white")
+        label1 = Label(self, text="Name:", bg="#000E19", fg="white")
         label1.pack()
-        nameEntry = Entry(self, width=20, bg="#000621", fg="white")
+        nameEntry = Entry(self, width=20, bg="#79C7C5", fg="#000E19")
         nameEntry.pack()
 
-        label2 = Label(self, text="Calories:", bg="black", fg="white")
+        label2 = Label(self, text="Calories:", bg="#000E19", fg="white")
         label2.pack()
-        kcalEntry = Entry(self, width=20, bg="#000621", fg="white")
+        kcalEntry = Entry(self, width=20, bg="#79C7C5", fg="#000E19")
         kcalEntry.pack()
 
-        label3 = Label(self, text="Protein:", bg="black", fg="white")
+        label3 = Label(self, text="Protein:", bg="#000E19", fg="white")
         label3.pack()
-        proteinEntry = Entry(self, width=20, bg="#000621", fg="white")
+        proteinEntry = Entry(self, width=20, bg="#79C7C5", fg="#000E19")
         proteinEntry.pack()
 
-        label4 = Label(self, text="Carbohydrates:", bg="black", fg="white")
+        label4 = Label(self, text="Carbohydrates:", bg="#000E19", fg="white")
         label4.pack()
-        carbEntry = Entry(self, width=20, bg="#000621", fg="white")
+        carbEntry = Entry(self, width=20, bg="#79C7C5", fg="#000E19")
         carbEntry.pack()
 
-        label5 = Label(self, text="Fat:", bg="black", fg="white")
+        label5 = Label(self, text="Fat:", bg="#000E19", fg="white")
         label5.pack()
-        fatEntry = Entry(self, width=20, bg="#000621", fg="white")
+        fatEntry = Entry(self, width=20, bg="#79C7C5", fg="#000E19")
         fatEntry.pack()
 
         submit = Button(self, text="Submit", width=8, command=validate)
@@ -289,7 +290,7 @@ class File_Write(Frame):
         button3 = Button(
             self,
             text="Back",
-            width=20,
+            width=20, bg='#79C7C5', fg='#000E19',
             command=lambda: master.switch(Menu))
         button3.pack(padx=10, pady=10)
 
