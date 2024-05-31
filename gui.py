@@ -1,12 +1,8 @@
-import main
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import *
 from tkinter import filedialog
 productList = {}
-
-function = main
-
 
 class App(Tk):
 
