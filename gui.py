@@ -11,7 +11,7 @@ class App(Tk):
         self._frame = None
         self.title("  .  ")
         self.switch(Menu)
-        self.geometry('1080x1920')
+        self.geometry('1280x800')
         self.config(bg="black")
 
     def switch(self, frame_class):
