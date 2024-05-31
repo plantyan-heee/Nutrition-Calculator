@@ -161,7 +161,7 @@ Yellow squash
 - Added 10 more foods into database
 - Minor bug fixes
 
-**V0.4.2** *Current version*
+**V0.4.2** 
 - UI Improved
 - Calculator function improved
   - Allowed decimal portion of food
@@ -170,6 +170,10 @@ Yellow squash
   - Allowed decimal places nutrition data
 - Minor bug fixes
 
-**V0.4.3** *Current version*
+**V0.4.3** 
 - Program logic improved
 - UI Improved
+
+**V0.4.4** *Current Version*
+- UI Improved
+- Code formatted

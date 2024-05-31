@@ -28,7 +28,7 @@ class Menu(Frame):
 
         label = Label(
             self,
-            text="Nutrition Calculator V0.4.3\n Choose an option.",
+            text="Nutrition Calculator V0.4.4\n Choose an option.",
             bg="#000E19",
             fg="#79C7C5")
         label.pack()
